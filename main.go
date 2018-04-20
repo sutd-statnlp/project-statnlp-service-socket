@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"./controller"
+	"./handler"
 )
 
 func main() {
@@ -21,6 +22,7 @@ func setupRoutes() *gin.Engine {
 	})
 
 	controller.InitHomeRoutes(router)
+	handler.ConfigRequest(router)
 
 	return router
 }
